@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard | MyShop</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body class="dashboard-body">
+
+<header class="dashboard-header">
+  <h1>Comfort Shopping</h1>
+  <button id="logout-btn"><i class="fa-solid fa-right-from-bracket"></i> Logout</button>
+</header>
+
+<section class="controls">
+  <input type="text" id="search" placeholder="Search items...">
+  <select id="category-filter">
+    <option value="all">All Categories</option>
+  </select>
+  <select id="sort">
+    <option value="default">Sort By</option>
+    <option value="name-asc">Name (A–Z)</option>
+    <option value="name-desc">Name (Z–A)</option>
+    <option value="category-asc">Category (A–Z)</option>
+    <option value="category-desc">Category (Z–A)</option>
+  </select>
+</section>
+
+<main id="product-container" class="product-container"></main>
+
+<!-- Modal -->
+<div id="modal" class="modal hidden">
+  <div class="modal-content">
+    <span id="close-modal" class="close-btn">&times;</span>
+    <img id="item-img" src="" alt="Item Image">
+    <h2 id="item-title"></h2>
+    <p id="item-category"></p>
+    <p id="item-description"></p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+/* ===== GENERAL ===== */
+body { font-family:'Poppins', sans-serif; margin:0; padding:0; }
+button { cursor:pointer; transition:0.3s; border:none; }
+
+/* ===== SIGNUP PAGE ===== */
+.auth-body {
+  display:flex; justify-content:center; align-items:center;
+  min-height:100vh;
+  background: linear-gradient(135deg, #fddde6, #c9e7ff, #e3d0ff);
+}
+.auth-container {
+  background:#fff; padding:30px; border-radius:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.1); width:320px; text-align:center;
+}
+.auth-container h2 { margin-bottom:20px; color:#ff4f81; }
+.auth-container input, .auth-container select, .auth-container button {
+  width:90%; padding:12px; margin:10px 0; border-radius:10px; border:1px solid #ccc; font-size:1em;
+}
+.auth-container button { background:#ff8fab; color:white; font-weight:bold; }
+.auth-container button:hover { background:#ff4f81; }
+
+/* ===== DASHBOARD ===== */
+.dashboard-body { background: linear-gradient(135deg, #fddde6, #c9e7ff, #e3d0ff); min-height:100vh; }
+
+.dashboard-header {
+  display:flex; justify-content:space-between; align-items:center;
+  padding:20px 40px; background: linear-gradient(90deg,#ffd6e0,#c8e7ff,#e8d5ff);
+  border-radius:0 0 20px 20px; box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+.dashboard-header h1 { color:#ff4f81; font-size:2em; }
+.dashboard-header button { background:#ff8fab; color:white; padding:8px 15px; border-radius:10px; }
+.dashboard-header button:hover { background:#ff4f81; }
+
+/* ===== CONTROLS ===== */
+.controls {
+  display:flex; justify-content:center; gap:15px; padding:20px; flex-wrap:wrap;
+}
+.controls input, .controls select {
+  padding:10px 15px; border-radius:10px; border:1px solid #ccc; min-width:160px;
+  font-size:1em;
+}
+
+/* ===== PRODUCT CARDS ===== */
+.product-container {
+  display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+  gap:25px; padding:25px;
+}
+.product-card {
+  background:#fff; border-radius:20px; box-shadow:0 5px 15px rgba(0,0,0,0.1);
+  overflow:hidden; cursor:pointer; transition:transform 0.3s, box-shadow 0.3s;
+  display:flex; flex-direction:column; justify-content:center; align-items:center;
+}
+.product-card:hover {
+  transform:translateY(-5px); box-shadow:0 15px 25px rgba(0,0,0,0.2);
+}
+.product-card img {
+  width:100%; 
+  height:180px; 
+  object-fit:contain; /* center and fit image properly */
+  display:block; 
+  margin:0 auto; 
+  background:#f9f9f9; /* optional light background */
+}
+.product-card img:hover { transform: scale(1.05); }
+.product-info { padding:15px; text-align:center; width:100%; }
+.product-info h3 { margin:0 0 10px 0; color:#ff4f81; font-size:1.1em; }
+.product-info p { margin:5px 0; color:#555; }
+
+/* ===== MODAL ===== */
+.modal {
+  position:fixed; top:0; left:0; width:100%; height:100%;
+  background:rgba(0,0,0,0.5); display:flex; justify-content:center; align-items:center; z-index:100;
+}
+.modal-content {
+  background:#fff; padding:20px; border-radius:20px;
+  width:90%; max-width:400px; max-height:80vh; /* modal limited size */
+  overflow-y:auto; position:relative;
+  box-shadow:0 15px 30px rgba(0,0,0,0.2);
+  display:flex; flex-direction:column; align-items:center;
+}
+.modal-content img {
+  width:100%; 
+  height:auto; 
+  border-radius:15px; 
+  display:block; 
+  margin-bottom:15px;
+}
+.modal-content h2 { color:#ff4f81; margin-bottom:10px; font-size:1.2em; text-align:center; }
+.modal-content p { color:#555; margin-bottom:10px; font-size:0.95em; text-align:center; }
+.close-btn {
+  position:absolute; top:10px; right:15px; font-size:28px; cursor:pointer; color:#ff4f81;
+  z-index:10;
+}
+.hidden { display:none; }
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:600px){
+  .controls { flex-direction:column; align-items:center; }
+  .controls input, .controls select { width:90%; }
+  .modal-content { max-width:90%; padding:15px; }
+}
+
+/* ===== PAGE LOAD ANIMATION ===== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px); /* halki si niche se slide */
+  animation: fadeIn 0.8s forwards; /* 0.8s mai fade-in + slide-up */
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
